@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Role" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUsersByRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="role" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUsersByRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersByRoleResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Manufacturer_GetBlankets">
+        <s:complexType />
+      </s:element>
+      <s:element name="Manufacturer_GetBlanketsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Manufacturer_GetBlanketsResult" type="tns:ArrayOfBlanket" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBlanket">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Blanket" nillable="true" type="tns:Blanket" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Blanket">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BlanketID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlanketName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fabric" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionNotes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BasePrice" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Manufacturer_AddBlanket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="tns:Blanket" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Manufacturer_AddBlanketResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Manufacturer_UpdateBlanket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="tns:Blanket" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Manufacturer_UpdateBlanketResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Manufacturer_DeleteBlanket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Manufacturer_DeleteBlanketResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Distributor_GetInventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="distId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Distributor_GetInventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Distributor_GetInventoryResult" type="tns:ArrayOfInventory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInventory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Inventory" nillable="true" type="tns:Inventory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Inventory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="InventoryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlanketName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnerUserID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitsInStock" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Distributor_UpdateStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="invId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Distributor_UpdateStockResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Distributor_GiveToSeller">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="distId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sellerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="blanketId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Distributor_GiveToSellerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SearchUserStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchUserStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchUserStockResult" type="tns:ArrayOfInventory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Seller_SearchBlankets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Seller_SearchBlanketsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Seller_SearchBlanketsResult" type="tns:ArrayOfBlanket" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsersByRole" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersByRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersByRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_GetBlanketsSoapIn">
+    <wsdl:part name="parameters" element="tns:Manufacturer_GetBlankets" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_GetBlanketsSoapOut">
+    <wsdl:part name="parameters" element="tns:Manufacturer_GetBlanketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_AddBlanketSoapIn">
+    <wsdl:part name="parameters" element="tns:Manufacturer_AddBlanket" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_AddBlanketSoapOut">
+    <wsdl:part name="parameters" element="tns:Manufacturer_AddBlanketResponse" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_UpdateBlanketSoapIn">
+    <wsdl:part name="parameters" element="tns:Manufacturer_UpdateBlanket" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_UpdateBlanketSoapOut">
+    <wsdl:part name="parameters" element="tns:Manufacturer_UpdateBlanketResponse" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_DeleteBlanketSoapIn">
+    <wsdl:part name="parameters" element="tns:Manufacturer_DeleteBlanket" />
+  </wsdl:message>
+  <wsdl:message name="Manufacturer_DeleteBlanketSoapOut">
+    <wsdl:part name="parameters" element="tns:Manufacturer_DeleteBlanketResponse" />
+  </wsdl:message>
+  <wsdl:message name="Distributor_GetInventorySoapIn">
+    <wsdl:part name="parameters" element="tns:Distributor_GetInventory" />
+  </wsdl:message>
+  <wsdl:message name="Distributor_GetInventorySoapOut">
+    <wsdl:part name="parameters" element="tns:Distributor_GetInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Distributor_UpdateStockSoapIn">
+    <wsdl:part name="parameters" element="tns:Distributor_UpdateStock" />
+  </wsdl:message>
+  <wsdl:message name="Distributor_UpdateStockSoapOut">
+    <wsdl:part name="parameters" element="tns:Distributor_UpdateStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="Distributor_GiveToSellerSoapIn">
+    <wsdl:part name="parameters" element="tns:Distributor_GiveToSeller" />
+  </wsdl:message>
+  <wsdl:message name="Distributor_GiveToSellerSoapOut">
+    <wsdl:part name="parameters" element="tns:Distributor_GiveToSellerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchUserStockSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchUserStock" />
+  </wsdl:message>
+  <wsdl:message name="SearchUserStockSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchUserStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="Seller_SearchBlanketsSoapIn">
+    <wsdl:part name="parameters" element="tns:Seller_SearchBlankets" />
+  </wsdl:message>
+  <wsdl:message name="Seller_SearchBlanketsSoapOut">
+    <wsdl:part name="parameters" element="tns:Seller_SearchBlanketsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ApiSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRole">
+      <wsdl:input message="tns:GetUsersByRoleSoapIn" />
+      <wsdl:output message="tns:GetUsersByRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_GetBlankets">
+      <wsdl:input message="tns:Manufacturer_GetBlanketsSoapIn" />
+      <wsdl:output message="tns:Manufacturer_GetBlanketsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_AddBlanket">
+      <wsdl:input message="tns:Manufacturer_AddBlanketSoapIn" />
+      <wsdl:output message="tns:Manufacturer_AddBlanketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_UpdateBlanket">
+      <wsdl:input message="tns:Manufacturer_UpdateBlanketSoapIn" />
+      <wsdl:output message="tns:Manufacturer_UpdateBlanketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_DeleteBlanket">
+      <wsdl:input message="tns:Manufacturer_DeleteBlanketSoapIn" />
+      <wsdl:output message="tns:Manufacturer_DeleteBlanketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_GetInventory">
+      <wsdl:input message="tns:Distributor_GetInventorySoapIn" />
+      <wsdl:output message="tns:Distributor_GetInventorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_UpdateStock">
+      <wsdl:input message="tns:Distributor_UpdateStockSoapIn" />
+      <wsdl:output message="tns:Distributor_UpdateStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_GiveToSeller">
+      <wsdl:input message="tns:Distributor_GiveToSellerSoapIn" />
+      <wsdl:output message="tns:Distributor_GiveToSellerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserStock">
+      <wsdl:input message="tns:SearchUserStockSoapIn" />
+      <wsdl:output message="tns:SearchUserStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Seller_SearchBlankets">
+      <wsdl:input message="tns:Seller_SearchBlanketsSoapIn" />
+      <wsdl:output message="tns:Seller_SearchBlanketsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ApiSoap" type="tns:ApiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRole">
+      <soap:operation soapAction="http://tempuri.org/GetUsersByRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_GetBlankets">
+      <soap:operation soapAction="http://tempuri.org/Manufacturer_GetBlankets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_AddBlanket">
+      <soap:operation soapAction="http://tempuri.org/Manufacturer_AddBlanket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_UpdateBlanket">
+      <soap:operation soapAction="http://tempuri.org/Manufacturer_UpdateBlanket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_DeleteBlanket">
+      <soap:operation soapAction="http://tempuri.org/Manufacturer_DeleteBlanket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_GetInventory">
+      <soap:operation soapAction="http://tempuri.org/Distributor_GetInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_UpdateStock">
+      <soap:operation soapAction="http://tempuri.org/Distributor_UpdateStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_GiveToSeller">
+      <soap:operation soapAction="http://tempuri.org/Distributor_GiveToSeller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserStock">
+      <soap:operation soapAction="http://tempuri.org/SearchUserStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seller_SearchBlankets">
+      <soap:operation soapAction="http://tempuri.org/Seller_SearchBlankets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ApiSoap12" type="tns:ApiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRole">
+      <soap12:operation soapAction="http://tempuri.org/GetUsersByRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_GetBlankets">
+      <soap12:operation soapAction="http://tempuri.org/Manufacturer_GetBlankets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_AddBlanket">
+      <soap12:operation soapAction="http://tempuri.org/Manufacturer_AddBlanket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_UpdateBlanket">
+      <soap12:operation soapAction="http://tempuri.org/Manufacturer_UpdateBlanket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Manufacturer_DeleteBlanket">
+      <soap12:operation soapAction="http://tempuri.org/Manufacturer_DeleteBlanket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_GetInventory">
+      <soap12:operation soapAction="http://tempuri.org/Distributor_GetInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_UpdateStock">
+      <soap12:operation soapAction="http://tempuri.org/Distributor_UpdateStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Distributor_GiveToSeller">
+      <soap12:operation soapAction="http://tempuri.org/Distributor_GiveToSeller" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserStock">
+      <soap12:operation soapAction="http://tempuri.org/SearchUserStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Seller_SearchBlankets">
+      <soap12:operation soapAction="http://tempuri.org/Seller_SearchBlankets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Api">
+    <wsdl:port name="ApiSoap" binding="tns:ApiSoap">
+      <soap:address location="http://localhost:44356/API.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ApiSoap12" binding="tns:ApiSoap12">
+      <soap12:address location="http://localhost:44356/API.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

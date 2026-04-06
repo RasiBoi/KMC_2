@@ -1,0 +1,36 @@
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\KMCEvent.Client.exe.config
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\KMCEvent.Client.exe
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\KMCEvent.Client.pdb
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\mscorlib.dll
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\normidna.nlp
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfc.nlp
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfd.nlp
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfkc.nlp
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfkd.nlp
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.csprojResolveAssemblyReference.cache
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.ParticipantDashboard.resources
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.LoginWindow.resources
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.OrganizerDashboard.resources
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.Properties.Resources.resources
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.PublicEventsDashboard.resources
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.csproj.GenerateResource.Cache
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.exe
+c:\Users\User\Desktop\ICBT ASSIGNMENT\st20305801_cse5013\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.pdb
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\KMCEvent.Client.exe.config
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\KMCEvent.Client.exe
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\KMCEvent.Client.pdb
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\mscorlib.dll
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\normidna.nlp
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfc.nlp
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfd.nlp
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfkc.nlp
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\bin\Debug\normnfkd.nlp
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.ParticipantDashboard.resources
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.LoginWindow.resources
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.OrganizerDashboard.resources
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.Properties.Resources.resources
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.PublicEventsDashboard.resources
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.exe
+C:\Users\User\Desktop\Tharushi\KMCEventManagement\KMCEvent.Client\obj\Debug\KMCEvent.Client.pdb
