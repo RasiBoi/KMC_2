@@ -7,13 +7,6 @@ namespace KMCEvent.Api.Model
 {
     public class Blanket
     {
-        // Legacy members retained for service compatibility.
-        public int BlanketID { get; set; }
-        public string BlanketName { get; set; }
-        public string Fabric { get; set; }
-        public string DescriptionNotes { get; set; }
-        public decimal BasePrice { get; set; }
-
         // Preferred event-platform aliases.
         public int EventID
         {

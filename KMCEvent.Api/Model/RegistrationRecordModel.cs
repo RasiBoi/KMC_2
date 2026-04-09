@@ -7,12 +7,6 @@ namespace KMCEvent.Api.Model
 {
     public class Inventory
     {
-        // Legacy members retained for service compatibility.
-        public int InventoryID { get; set; }
-        public int ProductID { get; set; }
-        public string BlanketName { get; set; }
-        public int OwnerUserID { get; set; }
-        public int UnitsInStock { get; set; }
 
         // Preferred event-platform aliases.
         public int RegistrationID

@@ -68,15 +68,15 @@ namespace KMCEvent.Api
         }
 
         [WebMethod(MessageName = "Manufacturer_AddBlanket")]
-        public void Legacy_CreateEventForCompatibilityClient(EventRecord eventRecord)
+        public void Legacy_CreateEventForCompatibilityClient(EventRecord b)
         {
-            new OrganizerActions().CreateEvent(eventRecord);
+            new OrganizerActions().CreateEvent(b);
         }
 
         [WebMethod(MessageName = "Manufacturer_UpdateBlanket")]
-        public void Legacy_UpdateEventForCompatibilityClient(EventRecord eventRecord)
+        public void Legacy_UpdateEventForCompatibilityClient(EventRecord b)
         {
-            new OrganizerActions().UpdateEvent(eventRecord);
+            new OrganizerActions().UpdateEvent(b);
         }
 
         [WebMethod(MessageName = "Manufacturer_DeleteBlanket")]
